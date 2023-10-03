@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>メール生成\サイト</title>
+        <link rel="stylesheet" type="text/css" href="css/response.css">
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <h1>メール生成ウェブサイト</h1>
+        <form>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>宛　　名：</th>
+                        <td>
+                            <input type="text" id="recipient" placeholder="〇〇株式会社＋△△担当者">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>送信回数：</th>
+                        <td>
+                            <select id="count">
+                                <option value="お世話になっております。">2回目以降</option>
+                                <option value="お世話になります。">初回</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>大　　学：</th>
+                        <td>
+                            <input type="text" id="sender1" placeholder="〇〇大学△△学部◇◇学科★★年">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>送 信 者：</th>
+                        <td>
+                            <input type="text" id="sender2" placeholder="名前">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>本　　文：</th>
+                        <td>
+                            <select id="message">
+                                <option value="こんにちは、お元気ですか？">挨拶</option>
+                                <option value="会議の日程を確認したいです。">会議の日程</option>
+                                <option value="報告書を送ります。">報告書</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            
+            <br>
+
+            <button type="button" onclick="generateEmail()">メール生成</button>
+        </form>
+
+        <h2>生成されたメール文面:</h2>
+        <textarea id="emailContent" rows="10" cols="40" readonly></textarea>
+    </body>
+</html>
